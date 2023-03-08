@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.article-info {
+  /* border: 1px solid black; */
+  padding: 1rem;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: beige;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.article-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.article-info p {
+  margin-bottom: 1rem;
+  font-size: large;
+  border: none;
+}

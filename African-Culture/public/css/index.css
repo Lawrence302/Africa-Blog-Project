@@ -1,0 +1,63 @@
+.body {
+  font-family: 'Open Sans', sans-serif;
+}
+.container {
+  /* border: 1px solid red; */
+}
+
+.hero-section {
+  height: 400px;
+  width: 90%;
+  background-image: url('/images/home-africa.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+
+  /* border: 1px solid black; */
+  margin: 0 auto;
+}
+
+.info-section {
+  margin-top: 1rem;
+}
+.info-section h1 {
+  text-align: center;
+  color: #033135;
+  font-weight: 400;
+  font-size: 60px;
+}
+.culture-intro {
+  color: #333;
+  font-size: 24px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.culture-intro p {
+  margin-top: 1rem;
+}
+.rescent-posts {
+  font-size: 24px;
+  color: #012124;
+  font-weight: 400;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.div-odd,
+.div-even {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  border-top: 2px solid #012124;
+}
+
+.div-even .pic-div,
+.div-odd .pic-div {
+  /* border: 1px solid green; */
+  min-width: 30%;
+}
+
+footer {
+  text-align: center;
+}

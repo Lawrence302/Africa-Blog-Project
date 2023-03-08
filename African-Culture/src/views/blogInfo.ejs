@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/blogInfo.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include("partials/header") %>
+
+    <div class="article-info">
+      <h2>Detail info on article</h2>
+      <p><b>Title :</b> <%= info.title %></p>
+      <p><b>Slug :</b> <%= info.slug %></p>
+      <p><b>Description :</b> <%= info.summary %></p>
+      <p><b>Description Length:</b> <%= info.summary.length %> Characters</p>
+      <p><b>Content Length :</b> <%= info.content.length %> Characters</p>
+      <p><b>Views :</b> <%= info.views %></p>
+      <p>
+        <b>Featured :</b> <%= info.featured + " " + " ." %> (' 0 false','1
+        true')
+      </p>
+      <p><b>Category :</b> <%= info.name %></p>
+      <p><b>Image :</b> <%= info.image_url %></p>
+      <p><b>Keywords :</b> <%= info.meta_keywords %></p>
+      <p><b>Author :</b> <%= info.first_name + " " + info.last_name %></p>
+      <p><b>Author email :</b> <%= info.email %></p>
+      <p><b>Created :</b> <%= info.created_at %></p>
+      <p><b>Updated :</b> <%= info.updated_at %></p>
+    </div>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>

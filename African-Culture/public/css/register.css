@@ -1,0 +1,123 @@
+/* contains css for the register and login page */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9cedf3;
+}
+
+.container {
+  /* border: 1px solid black; */
+  padding: 1rem;
+  width: 50%;
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .pass-result-div p {
+  color: green;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  margin: 10px;
+}
+
+.container .fail-result-div p {
+  color: red;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  margin: 10px;
+}
+form {
+  border: 1px solid #10555a;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 1rem;
+  /* background-color: #fff; */
+  background-color: #10555a;
+
+  font-size: large;
+  color: #fff;
+
+  box-shadow: 0px 0px 3px 1px #10555a;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+form input {
+  padding: 5px;
+  width: 400px;
+  margin-bottom: 10px;
+  font-size: large;
+  height: 1.5rem;
+  border: none;
+  background-color: #c5f5f8;
+  border-bottom: 1px solid #fff;
+}
+
+form input:focus {
+  /* border: 1px solid #10555a; */
+  background-color: #fff;
+  outline: none;
+}
+
+form textarea {
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+form .gender-box {
+  border: 1px solid black;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+form .gender-box input {
+  width: fit-content;
+}
+
+form a {
+  text-decoration: none;
+  color: #42acb4;
+}
+
+form .submit_btn {
+  border: none;
+  height: fit-content;
+  padding: 0.6rem;
+  width: 100%;
+  background-color: #42acb4;
+  color: #fff;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 500;
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 12px;
+  }
+  .container {
+    width: 95%;
+  }
+  form input {
+    width: 100%;
+  }
+
+  form textarea {
+    width: 100%;
+  }
+}

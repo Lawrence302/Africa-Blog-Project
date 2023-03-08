@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/createPost.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-white">
+    <div class="container bg-white mt-4">
+      <!-- <% if(!response){ %> <% }else{ %> <%= response.data %> <% } %> -->
+      <form action="/articles/compose" method="POST">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            name="title"
+            value="<%= response && response.data.articleInfo.title  %>"
+            class="form-control"
+            placeholder="Article Title"
+          />
+        </div>
+        <div class="form-group">
+          <label for="title">Category:</label>
+          <select class="form-control" id="category" name="category">
+            <option value="dance" <%= response && response.data.articleInfo.category === "dance" ? "selected" : "" %> >Dance</option>
+            <option value="culture" <%= response && response.data.articleInfo.category === "culture" ? "selected" : "" %>>Culture</option>
+            <option value="music" <%= response && response.data.articleInfo.category === "music" ? "selected" : "" %>>Music</option>
+            <option value="climate" <%= response && response.data.articleInfo.category === "climate" ? "selected" : "" %>>Climate</option>
+            <option value="love" <%= response && response.data.articleInfo.category === "love" ? "selected" : "" %>>Love</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="title">Slug:</label>
+          <input
+            type="text"
+            name="slug"
+            class="form-control"
+            value="<%= response && response.data.articleInfo.slug  %>"
+            placeholder="example : culture-of-cameroon"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea
+            type="text"
+            class="form-control"
+            placeholder="Article description or Summary"
+            name="description"
+            rows="4"
+          >
+          <%= response && response.data.articleInfo.description  %>
+          </textarea>
+        </div>
+        <div class="form-group">
+          <label for="image">Image Link : </label>
+          <input
+            type="url"
+            class="form-control"
+            value="<%= response && response.data.articleInfo.image  %>"
+            placeholder="www.example.com/image-name"
+            name="image"
+          />
+        </div>
+        <div class="form-group">
+          <label for="keywords">Keywords:</label>
+          <input
+            type="text"
+            class="form-control"
+            value="<%= response && response.data.articleInfo.keywords  %>"
+            placeholder="Enter keywords seperated by comma"
+            name="keywords"
+          />
+        </div>
+        <div class="form-group">
+          <label for="content">Content:</label>
+          <textarea
+            type="text"
+            class="form-control"
+            placeholder="Article Content using markdown"
+            name="content"
+            rows="30"
+          >
+          <%= response && response.data.articleInfo.content %>
+        </textarea
+          >
+        </div>
+        <div>
+          <% if(!response || response == null){ %> <% }else{ %> <%=
+          response.failed %> <% } %>
+        </div>
+        <a href="/"><button type="button" class="btn btn-secondary">Cancel</button></a>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </body>
+</html>

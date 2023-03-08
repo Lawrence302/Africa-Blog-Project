@@ -1,0 +1,57 @@
+<!-- header -->
+
+<header class="header">
+  <nav class="navbar">
+    <div class="sec1">
+      <div class="header__logo">LOGO</div>
+    </div>
+    <div class="sec2">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/articles">Blogs</a></li>
+        <li>
+          <select name="country">
+            <option value="all" class="country-select" selected disabled>
+              Select a country
+            </option>
+            <option value="all" class="country-select">All Blogs</option>
+            <a href="/articles/search/algeria"
+              ><option class="country-select" value="algeria">
+                Algeria
+              </option></a
+            >
+            <a href="/articles/search/cameroon"
+              ><option class="country-select" value="cameroon">
+                Cameroon
+              </option></a
+            >
+
+            <option class="country-select" value="nigeria">Nigeria</option>
+            <option class="country-select" class="country-select" value="mali">
+              Mali
+            </option>
+            <option class="country-select" value="ivory coast">
+              Ivory Coast
+            </option>
+
+            <option value="benin" class="country-select">Benin</option>
+
+            <option value="botswana" class="country-select">Botswana</option>
+            <option value="kenya" class="country-select">Kenya</option>
+            <option value="libiya" class="country-select">Botswana</option>
+            <option value="ethopia" class="country-select">Ethopia</option>
+            <option value="eritrea" class="country-select">Eritrea</option>
+          </select>
+        </li>
+        <li><a href="/contact">Contact</a></li>
+        <li class="log-btn">
+          <% if(id == null || id == undefined){ %>
+          <a style="color: #07494e" href="/author/login">Login</a>
+          <%}else{ %>
+          <a style="color: #012022" href="/author/dashboard">dashboard</a>
+          <%} %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

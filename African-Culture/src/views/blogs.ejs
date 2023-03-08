@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/search.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <%- include("partials/header") %>
+    <!-- <h1>Blogs here</h1> -->
+    <div>
+      <h3 class="heading" style="color: #333; text-align: center">All Blogs</h3>
+    </div>
+    <div class="search-div">
+      <form action="/articles/search/form-search-value" method="get">
+        <input type="text" name="search" placeholder="Search Blog post" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="wrapper">
+      <!-- /////////////////////// -->
+      <%- include('partials/contentCard') %>
+    </div>
+    <%- include('partials/footer') %>
+  </body>
+</html>
+
+<!-- commented code for card -->
+<!-- 
+    <div class="news">
+      
+        <% if(articles != null){ %> <% articles.forEach( article => { %>
+            <a href="/news/show/<%= article.id %>">
+              <div class="news__card">
+                <img src="<%= article.image_url %>" alt="blog image" />
+                <h2><%= article.title %></h2>
+                <p><%= article.description %></p>
+              </div>
+            </a>
+    
+            <% }) %> <% } else { %> No posts foud. <% } %>
+          </div>  -->

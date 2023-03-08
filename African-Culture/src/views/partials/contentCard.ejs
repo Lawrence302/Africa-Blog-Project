@@ -1,0 +1,15 @@
+<!-- code for blog post cards -->
+
+<div class="news">
+  <% if(articles != null){ %> <% articles.forEach( article => { %>
+  <a href="/articles/view/<%= article.slug %>">
+    <div class="news__card">
+      <img src="<%= article.image_url %>" alt="blog image" />
+      <h2><%= article.title %></h2>
+      <p><%= article.summary.substring(0,200) %></p>
+      <span>read more...</span>
+    </div>
+  </a>
+
+  <% }) %> <% } else { %> No posts foud. <% } %>
+</div>

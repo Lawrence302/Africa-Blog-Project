@@ -1,0 +1,11 @@
+#files to be ingnored while uploading to git
+
+#node modules folder to avoid uploading the whole thing which occupies space
+
+node_modules
+
+#env file containing environmental variable used for sensitive information
+.env
+
+# does not ignore the README.md file
+!README.md

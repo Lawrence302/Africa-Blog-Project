@@ -1,0 +1,24 @@
+<!-- footer -->
+
+<footer>
+  <div>
+    <p>All rights reserved&#169; 2023</p>
+  </div>
+</footer>
+
+<script>
+  const select = document.querySelectorAll('.country-select');
+  select.forEach((select) => {
+    select.addEventListener('click', function () {
+      const url = this.value;
+
+      console.log(url);
+      if (url) {
+        if (url === 'all') {
+          return (window.location = `/articles/`);
+        }
+        window.location = `/articles/search/${url}`;
+      }
+    });
+  });
+</script>
