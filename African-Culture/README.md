@@ -22,9 +22,9 @@
 
 Use the following steps to run the program on your pc
 
-> First ensure that the above requirements above are met install the necessary requirements
-> secondly dowload and extract the project on your editor 
-> navigate to your project from terminal
-> run the command " npm install " . this will install all the necessary modules as specified in the package.json file
-> to start the project on localhost, use the command " npm start " this will start the server 
-> go to your browser and open the localhost:3000 port to view project
+- First ensure that the above requirements above are met install the necessary requirements
+- secondly dowload and extract the project on your editor 
+- navigate to your project from terminal
+- run the command " npm install " . this will install all the necessary modules as specified in the package.json file
+- to start the project on localhost, use the command " npm start " this will start the server 
+- go to your browser and open the localhost:3000 port to view project
