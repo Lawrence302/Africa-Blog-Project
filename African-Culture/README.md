@@ -28,3 +28,6 @@ Use the following steps to run the program on your pc
 - run the command " npm install " . this will install all the necessary modules as specified in the package.json file
 - to start the project on localhost, use the command " npm start " this will start the server 
 - go to your browser and open the localhost:3000 port to view project
+
+
+- the project will not start if you have not created the neccessary database tables . this information can be found in schemaInfo.sql file
